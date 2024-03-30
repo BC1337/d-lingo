@@ -1,0 +1,32 @@
+# React Native specific
+node_modules/
+npm-debug.log
+yarn-error.log
+ios/Pods/
+ios/build/
+android/.gradle/
+android/build/
+android/app/build/
+.DS_Store
+*.jks
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.iml
+
+# Build specific
+/build/
+/out/
+dist/
+
+# Custom items mentioned in your project
+CA
+Avatar/
+
+# Environment configuration
+.env
+.env.local
+.env.development
+.env.test
+.env.production
