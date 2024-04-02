@@ -5,6 +5,7 @@ import { FeedWrapper } from "@/components/ui/feed-wrapper"
 import { Header } from "./header"
 import { UserProgress } from "@/components/ui/user-progress"
 import { getUnits, getUserProgress } from "@/db/queries"
+import { Unit } from "./unit"
 
 const Learn = async () => {
 
@@ -39,7 +40,15 @@ const Learn = async () => {
         <Header title={userProgress.activeCourse.title}/>
         {units.map((unit) => (
           <div key={unit.id} className="mb-10">
-            {JSON.stringify(unit)}
+            <Unit 
+              id={unit.id}
+              order={unit.order}
+              description={unit.description}
+              title={unit.title}
+              lessons={unit.lessons}
+              activeLesson={undefined}
+              activeLessonPercentage={0}
+            />
           </div>
         ))}
       </FeedWrapper>
